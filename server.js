@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = exrpress();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 1000;
 
 // HTTP request logger
 app.use(morgan('tiny'));
@@ -26,3 +26,5 @@ app.get('/api/name', (req, res) => {
     };
     res.json(data);
 });
+
+app.listen(PORT, console.log(`Server is starting at ${PORT}`))
