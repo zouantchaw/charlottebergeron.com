@@ -6,7 +6,16 @@ const path = require('path');
 
 const app = exrpress();
 
-const PORT = process.env.PORT || 1000;
+const PORT = process.env.PORT || 8080;
+
+mongoose.connect('mongodb://localhost/charlottebergeron.com', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose is connected!');
+});
 
 // HTTP request logger
 app.use(morgan('tiny'));
