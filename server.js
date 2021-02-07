@@ -1,23 +1,54 @@
-import MONGODB_URI from "./uri";
-
 const exrpress = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path'); 
+
+const { MONGODB_URI } = require('./uri');
 
 
 const app = exrpress();
 
 const PORT = process.env.PORT || 8080;
 
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/charlottebergeron.com', {
+mongoose.connect(MONGODB_URI || 'mongodb://localhost/cb_website', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
 mongoose.connection.on('connected', () => {
-    console.log('Mongoose is connected!');
+    console.log('Mongoose is connected!!')
 });
+
+// Schema 
+const Schema = mongoose.Schema;
+const EssaySchema = new Schema({
+    title: String,
+    body: String,
+    date: {
+        type: String,
+        default: Date.now()
+    }
+});
+
+//Model 
+const Essay = mongoose.model('Essay', EssaySchema);
+
+//Saving data to mongo db
+const data = {
+    title: 'Welcome to my website',
+    body: "Testing to see if this database connection is working"
+};
+
+const newEssay = new Essay(data); // Instance of model
+newEssay.save((error) => {
+    if (error) {
+        console.log('Ooops, something happened');
+    } else {
+        console.log('Data has been saved!!');
+    }
+})
+// .save();
+
 
 // HTTP request logger
 app.use(morgan('tiny'));
