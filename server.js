@@ -1,14 +1,16 @@
+import MONGODB_URI from "./uri";
+
 const exrpress = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const path = require('path');
+const path = require('path'); 
 
 
 const app = exrpress();
 
 const PORT = process.env.PORT || 8080;
 
-mongoose.connect('mongodb://localhost/charlottebergeron.com', {
+mongoose.connect(MONGODB_URI || 'mongodb://localhost/charlottebergeron.com', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
