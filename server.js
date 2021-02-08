@@ -1,7 +1,7 @@
 const exrpress = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const path = require('path'); 
+const path = require('path');
 
 const { MONGODB_URI } = require('./uri');
 
@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 8080;
 
 const routes = require('./routes/api');
 
-mongoose.connect(MONGODB_URI || 'mongodb://localhost/cb_website', {
+//Disconnected from Atlas, insert URI variable to reconnect
+// MONGODB_URI
+
+mongoose.connect('mongodb://localhost/cb_website', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -23,6 +26,6 @@ mongoose.connection.on('connected', () => {
 
 // HTTP request logger
 app.use(morgan('tiny'));
-app.use('/', routes);
+app.use('/api', routes);
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
