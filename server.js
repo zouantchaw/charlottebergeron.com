@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8080;
 
 const routes = require('./routes/api');
 
-//Disconnected from Atlas, insert URI variable to reconnect
+//To disconnect from Atlas, remove: 
 // MONGODB_URI
 
 mongoose.connect('mongodb://localhost/cb_website', {

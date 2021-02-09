@@ -3,15 +3,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useParams,
   } from "react-router-dom";
 import { Navbar,Nav } from 'react-bootstrap'
-import App from '../App';
 import Home from './Home';
 import About from './About';
-//   import Home from './Home';
-//   import AboutUs from './AboutUs';
-//   import ContactUs from './ContactUs';
+import  EssaysContainer from '../containers/EssaysContainer'
 
 class BootstrapNavbar extends React.Component{
 
@@ -27,7 +23,7 @@ class BootstrapNavbar extends React.Component{
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
                                     <Nav.Link href="/">Accueil</Nav.Link>
-                                    <Nav.Link href="/essay">Essais</Nav.Link>
+                                    <Nav.Link href="/essays">Essais</Nav.Link>
                                     <Nav.Link href="/short-essays">Essais courts</Nav.Link>
                                     <Nav.Link href="/about">À propos de moi</Nav.Link>
                                     </Nav>
@@ -41,8 +37,8 @@ class BootstrapNavbar extends React.Component{
                                 <Route path="/about">
                                     <About />
                                 </Route>
-                                <Route path="/contact-us">
-                                    {/* <ContactUs /> */}
+                                <Route path="/essays">
+                                    <EssaysContainer />
                                 </Route>
                             </Switch>
                         </Router>

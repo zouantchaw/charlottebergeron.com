@@ -14,4 +14,5 @@ const EssaySchema = new Schema({
 //Model 
 const Essay = mongoose.model('Essay', EssaySchema);
 
+
 module.exports = Essay;

@@ -5,7 +5,7 @@ const router = express.Router();
 const Essay = require('../models/essay');
 
 //Routes
-router.get('/', (req, res) => {
+router.get('/essays', (req, res) => {
 
     Essay.find({ })
         .then((data) => {
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
             res.json(data);
         })
         .catch((error) => {
-            console.log('error: ', daerrorta)
+            console.log('error: ', error)
         });
 });
 
