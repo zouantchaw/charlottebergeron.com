@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import Essays from '../components/Essays'
 
 class EssaysContainer extends Component {
 
@@ -11,8 +11,16 @@ class EssaysContainer extends Component {
     getEssays = () => {
         fetch('http://localhost:8080/api/essays')
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => {
+                this.setState({essays: data});
+                console.log(`Data recieved: ${data}`);
+                console.log(`State- Essays: ${this.state.essays}`)
+            })
     };
+
+    renderEssays = () => {
+        debugger
+    }
     
     // axios.get('http://localhost:8080/api/name')
     // .then((resp) => {
@@ -32,6 +40,7 @@ class EssaysContainer extends Component {
         return (
             <div>
                 <h2>Essays</h2>
+                <Essays essays={this.state.essays}/>
             </div>
         );
     }

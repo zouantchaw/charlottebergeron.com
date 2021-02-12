@@ -7,9 +7,9 @@ class Home extends Component {
             <div>
                 <h2>
                     <Jumbotron>
-                        <h1>Welcome, I’m Charlotte.</h1>
+                        <h1>Bienvenue, je suis Charlotte.</h1>
                         <p>
-                        Here you will get to know more about my ideas and themes I am currently reflecting about through my <a href='/'>essays</a>.
+                        Ici, à travers mes <a href='/essays'>essais</a>, vous avez accès à mes idées et aux thèmes sur lesquels je réfléchis présentement.
                         </p>
                     </Jumbotron>
                 </h2>

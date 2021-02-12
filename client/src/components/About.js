@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
+import { Jumbotron } from 'react-bootstrap'
 
 class About extends Component {
     render() {
         return (
             <div>
+                <Jumbotron>
                 <div>
-                    <h3>Welcome, I’m Charlotte</h3>
+                    <h3>Bienvenue, je suis Charlotte.</h3>
                 </div>
 
                 <div>
                     <p>
-                        I am a college student trying to interact more with the real world (meaning the world that is happening outside of school). I am mainly here to think out loud and hopefully get some feedback.
-                        Let me know your impressions and let’s start a discussion.
+                        Je suis une étudiante universitaire qui essaie d'interagir avec la société qui existe en dehors de l’école. Principalement, je suis ici pour penser à voix haute et, je l’espère, recevoir vos feedback.
+
+                    <br />
+                    <br />
+                        Partagez vos impressions avec moi et commençons une discussion.
                     </p>
                 </div>
+                </Jumbotron>
             </div>
         );
     }
