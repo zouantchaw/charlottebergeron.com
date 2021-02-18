@@ -1,8 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function Footer() {
   return (
-    <div className="main-footer">
+    <FooterContainer className="main-footer">
+      <div className="footer-middle">
       <div className="container">
         <div className="row">
           {/* Column 1 */}
@@ -43,8 +45,33 @@ function Footer() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </FooterContainer>
   );
 }
 
 export default Footer;
+
+const FooterContainer = styled.footer`
+.footer-middle {
+  background: var(--mainDark);
+  padding-top: 3rem;
+  color: var(--mainWhite);
+  text-align: center;
+}
+
+.footer-bottom {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  
+}
+
+.main-footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  padding-bottom:60px;
+}
+`;
