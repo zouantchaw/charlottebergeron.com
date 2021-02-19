@@ -4,7 +4,10 @@ import '../Footer.css';
 function Footer() {
   return (
     <div className="Footer">
-      Footer
+      <p>
+        Copyright &copy;{new Date().getFullYear()} Charlotter Bergeron
+      </p>
+      <p>Designed by WZ</p>
     </div>
   )
 }

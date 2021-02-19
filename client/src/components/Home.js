@@ -12,6 +12,7 @@ class Home extends Component {
                         Ici, à travers mes <a href='/essays'>essais</a>, vous avez accès à mes idées et aux thèmes sur lesquels je réfléchis présentement.
                         </p>
                     </Jumbotron>
+                    
                 </h2>
             </div>
         );

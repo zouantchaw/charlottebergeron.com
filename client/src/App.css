@@ -12,3 +12,11 @@
   background-color: tomato;
   color: white;
 } */
+
+.Content {
+  flex: 1 0 auto;
+}
+
+.Footer {
+  flex-shrink: 0;
+}
