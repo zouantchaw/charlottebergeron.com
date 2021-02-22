@@ -22,10 +22,10 @@ class BootstrapNavbar extends React.Component{
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
-                                    <Nav.Link href="/">Accueil</Nav.Link>
-                                    <Nav.Link href="/essays">Essais</Nav.Link>
-                                    <Nav.Link href="/short-essays">Essais courts</Nav.Link>
-                                    <Nav.Link href="/about">À propos de moi</Nav.Link>
+                                    <Nav.Link href="/">Home</Nav.Link>
+                                    <Nav.Link href="/essays">Essays</Nav.Link>
+                                    <Nav.Link href="/short-essays"> Short Essays</Nav.Link>
+                                    <Nav.Link href="/about">About</Nav.Link>
                                     </Nav>
                                 </Navbar.Collapse>
                             </Navbar>

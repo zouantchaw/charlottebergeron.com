@@ -7,16 +7,16 @@ class About extends Component {
             <div>
                 <Jumbotron>
                 <div>
-                    <h3>Bienvenue, je suis Charlotte.</h3>
+                    <h3>Hi, I'm Charlotte.</h3>
                 </div>
 
                 <div>
                     <p>
-                        Je suis une étudiante universitaire qui essaie d'interagir avec la société qui existe en dehors de l’école. Principalement, je suis ici pour penser à voix haute et, je l’espère, recevoir vos feedback.
+                    I am a college student trying to interact more with the real world (meaning the world that is happening outside of school). I am mainly here to think out loud and hopefully get some feedback.
 
                     <br />
                     <br />
-                        Partagez vos impressions avec moi et commençons une discussion.
+                        Let me know your impressions and let’s start a discussion.
                     </p>
                 </div>
                 </Jumbotron>
