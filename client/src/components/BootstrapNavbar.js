@@ -8,6 +8,7 @@ import { Navbar,Nav } from 'react-bootstrap'
 import Home from './Home';
 import About from './About';
 import  EssaysContainer from '../containers/EssaysContainer'
+import ShortEssays from './ShortEssays';
 
 class BootstrapNavbar extends React.Component{
 
@@ -39,6 +40,9 @@ class BootstrapNavbar extends React.Component{
                                 </Route>
                                 <Route path="/essays">
                                     <EssaysContainer />
+                                </Route>
+                                <Route path="/short-essays">
+                                    <ShortEssays />
                                 </Route>
                             </Switch>
                         </Router>
