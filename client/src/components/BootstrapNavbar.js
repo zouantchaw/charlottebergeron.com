@@ -1,9 +1,9 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-  } from "react-router-dom";
+// import {
+//     BrowserRouter as Router,
+//     Switch,
+//     Route,
+//   } from "react-router-dom";
 import { Navbar,Nav } from 'react-bootstrap'
 import Home from './Home';
 import About from './About';
@@ -17,7 +17,7 @@ class BootstrapNavbar extends React.Component{
             <div>
                 <div className="row">
                     <div className="col-md-12">
-                        <Router>
+                        {/* <Router> */}
                             <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
                                 <Navbar.Brand href="/">Charlotte Bergeron</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,7 +31,7 @@ class BootstrapNavbar extends React.Component{
                                 </Navbar.Collapse>
                             </Navbar>
                             <br />
-                            <Switch>
+                            {/* <Switch>
                                 <Route exact path="/">
                                     <Home />
                                 </Route>
@@ -44,8 +44,8 @@ class BootstrapNavbar extends React.Component{
                                 <Route path="/short-essays">
                                     <ShortEssays />
                                 </Route>
-                            </Switch>
-                        </Router>
+                            </Switch> */}
+                        {/* </Router> */}
                     </div>
                 </div>
             </div>
