@@ -12,40 +12,28 @@ import { Navbar,Nav } from 'react-bootstrap'
 import Home from './components/Home';
 import About from './components/About';
 import  EssaysContainer from './containers/EssaysContainer'
-import ShortEssays from './containers/ShortEssaysContainer';
+import ShortEssays from './components/ShortEssays';
+import Essays from './components/Essays';
 
 class App extends Component {
-
-  let routes = (
-    <Switch>
-    <Route exact path="/">
-        <Home />
-    </Route>
-    <Route path="/about">
-        <About />
-    </Route>
-    <Route path="/essays">
-        <EssaysContainer />
-    </Route>
-    <Route path="/short-essays">
-        <ShortEssays />
-    </Route>
-    </Switch>
-  );
   render() {
     return (
       <Router>
-
         <div className="Content">
           <BootstrapNavbar />
+            <Route exact path="/"> <Home /> </Route>
+            <Route path="/about"> <About /> </Route>
+            <Route path="/short-essays"> <ShortEssays /> </Route>
+            <Route path="/essays" render={routerProps => <EssaysContainer {...routerProps} />} />
+            {/* <Route path="/essays"> <EssaysContainer /> </Route> */}
+
         </div>
-
-
         <Footer className="Footer"/>
-
       </Router>
-    );
+    );                                                                                                                                                
   }
 }
 
 export default App;
+        // <Switch>
+        //   </Switch>          
