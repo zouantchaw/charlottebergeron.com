@@ -15,7 +15,6 @@ class Body extends Component {
                 <Route path="/short-essays"> <ShortEssays /> </Route>
                 <Route path="/essays" render={routerProps => <EssaysContainer {...routerProps} />} />
                 {/* <Route path="/essays"> <EssaysContainer /> </Route> */}
-
             </Switch>
         );
     }
