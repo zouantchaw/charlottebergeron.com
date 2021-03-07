@@ -14,6 +14,8 @@ import About from './components/About';
 import  EssaysContainer from './containers/EssaysContainer'
 import ShortEssays from './components/ShortEssays';
 import Essays from './components/Essays';
+import Body from './components/Body';
+
 
 class App extends Component {
   render() {
@@ -21,12 +23,7 @@ class App extends Component {
       <Router>
         <div className="Content">
           <BootstrapNavbar />
-            <Route exact path="/"> <Home /> </Route>
-            <Route path="/about"> <About /> </Route>
-            <Route path="/short-essays"> <ShortEssays /> </Route>
-            <Route path="/essays" render={routerProps => <EssaysContainer {...routerProps} />} />
-            {/* <Route path="/essays"> <EssaysContainer /> </Route> */}
-
+          <Body />
         </div>
         <Footer className="Footer"/>
       </Router>

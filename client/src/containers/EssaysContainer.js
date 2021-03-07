@@ -43,7 +43,7 @@ class EssaysContainer extends Component {
             <div>
                 <h2>Essays</h2>
                 <Essays essays={this.state.essays}/>
-                <Route path={`${this.props.match.url}/:essayTitle`} render={routerProps => <EssayShow {...routerProps} essays={this.state.essays} />} />                
+                <Route path={`${this.props.match.url}/:essayTitle`} component={EssayShow} />                
                 {/* <Route path={`${this.props.match.url}/:essayTitle`} render={routerProps => <EssayShow {...routerProps} essays={this.state.essays} />} />                 */}
             </div>
         );
