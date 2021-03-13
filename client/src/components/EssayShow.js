@@ -1,38 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 
+function EssayShow(match) {
 
-class EssayShow extends Component {
-        
-        render() {
-            return (
-                <div>
-                    <h3>Test</h3>
-                </div>
-        );
-    }
+    useEffect(() => {
+        fetchEssay();
+        console.log(match.match.params.id)
+    }, []);
+
+    const [essays, setEssay] = useState({});
+
+    const fetchEssay = async () => {
+        const fetchEssay = await fetch('http://localhost:8080/api/essays');
+        const essays = await fetchEssay.json()
+        setEssay(essays)
+        console.log(essays)
+    };
+
+    return (
+        <div>
+            Test
+        </div>
+    );
 }
 
 export default EssayShow;
-
-
-
-
-
-
-
-
-
-// import React from 'react';
- 
-// // Here we add `match` to the arguments so we can access the path information 
-// // in `routerProps` that is passed from MoviesPage.js 
-// const EssayShow = ({match}) => {
-//     debugger
-//   return (
-//     <div>
-//       <h3>{ this.props.essays[match.params.essayTitle].body }</h3>
-//     </div>
-//   );
-// }
- 
-// export default EssayShow;

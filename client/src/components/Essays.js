@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 class Essays extends Component {
 
-
     renderEssays = () => { 
-        console.log(this.props.essays)
         let essayTitle;
         return this.props.essays.map(essay => (
             <Card style={{ width: '18rem' }}>
