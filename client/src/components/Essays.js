@@ -7,14 +7,14 @@ class Essays extends Component {
 
     renderEssays = () => { 
         let essayTitle;
+        console.log(this.props)
         return this.props.essays.map(essay => (
             <Card style={{ width: '18rem' }}>
                     <Card.Body>
                         {essayTitle = essay.title}
                         <Card.Title>{essay.title}</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                            Iploribus Unum
                         </Card.Text>
                         <Link key={essayTitle} to={`/essays/${essayTitle}`}>Read</Link>
                     </Card.Body>

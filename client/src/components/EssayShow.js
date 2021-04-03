@@ -1,27 +1,35 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 
-function EssayShow(match) {
+class EssayShow extends Component {
 
-    useEffect(() => {
-        fetchEssay();
-        console.log(match.match.params.id)
-    }, []);
+    state = {
+        essays: []
+    }
 
-    const [essays, setEssay] = useState({});
 
-    const fetchEssay = async () => {
-        const fetchEssay = await fetch('http://localhost:8080/api/essays');
-        const essays = await fetchEssay.json()
-        setEssay(essays)
-        console.log(essays)
+    getEssays = () => {
+        fetch('http://localhost:8080/api/essays')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({essays: data});
+                console.log(`Data recieved: ${data[0]}`);
+                console.log(`State- Essays: ${this.state.essays}`)
+            })
     };
 
-    return (
-        <div>
-            Test
-        </div>
-    );
+    componentDidMount = () => {
+        this.getEssays();
+        console.log(this.props.essays)
+    }
+
+
+    render() {
+        return (
+            <div>
+                Test
+            </div>
+        );
+    }
 }
 
 export default EssayShow;

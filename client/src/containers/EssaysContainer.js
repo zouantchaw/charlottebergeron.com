@@ -24,7 +24,7 @@ class EssaysContainer extends Component {
     render() {
         return (
             <div>
-                <h2>Essays</h2>
+                <h2>Essays</h2> 
                 <Essays essays={this.state.essays}/>
             </div>
         );
